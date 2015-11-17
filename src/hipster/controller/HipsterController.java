@@ -8,9 +8,15 @@ public class HipsterController
 	private Hipster firstHipster;
 	private HipsterFrame baseFrame;
 	
+	public HipsterController()
+	{
+		firstHipster = new Hipster();
+		baseFrame = new HipsterFrame(this);
+	}
+	
 	public void start()
 	{
-		String myName = baseFrame.getResponce("What is your name?");
+		String myName = baseFrame.getRespone("What is your name?");
 		firstHipster.setName(myName);
 		baseFrame.setTitle(myName + " 's Hipster Project!");
 	}
